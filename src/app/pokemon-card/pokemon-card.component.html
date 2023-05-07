@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem">
+  <img [src]="pokemonImageUrl()" class="card-img-top" alt="PokemonImage" />
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon.name }}</h5>
+    <p class="card-text">Birth date : {{ pokemon.birthDate }}</p>
+    <div class="row">
+      <a class="col btn btn-dark w-100 me-1">Edit</a>
+      <a class="col btn btn-danger w-100" (click)="deletePokemon()">Delete</a>
+    </div>
+  </div>
+</div>

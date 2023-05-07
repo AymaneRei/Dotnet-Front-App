@@ -1,0 +1,56 @@
+<div class="container-fluid text-center mt-5">
+  <div class="row justify-content-md-center">
+    <div class="col-auto">
+      <div class="card" style="width: 38rem">
+        <div
+          *ngIf="successMessage"
+          class="alert alert-success m-1"
+          role="alert"
+        >
+          Pokemon successfully created !
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger m-1" role="alert">
+          Error while creating Pokemon !
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="save()" [formGroup]="pokemonForm">
+            <div class="mb-3">
+              <label for="pokemonName" class="form-label">Pokemon name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pokemonName"
+                formControlName="name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="owner" class="form-label">Owner id</label>
+              <input
+                type="text"
+                class="form-control"
+                id="owner"
+                formControlName="ownerId"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Category id</label>
+              <input
+                type="text"
+                class="form-control"
+                id="category"
+                formControlName="categoryId"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-dark w-100"
+              [disabled]="pokemonForm.invalid"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

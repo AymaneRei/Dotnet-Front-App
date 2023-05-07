@@ -1,0 +1,15 @@
+// Style spécifique à la barre latérale
+.sidebar {
+  padding: 48px 0 0; /* Ajout d'un padding en haut pour que la barre de navigation ne soit pas cachée */
+  height: 100%;
+  min-height: 100vh;
+}
+
+// Styles pour le contenu principal
+.main {
+  padding: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
